@@ -1,0 +1,107 @@
+:root {
+  --navy: #1A3652;
+  --accent: #1976A4;
+  --bg: #F5F8FB;
+  --surface: #FFFFFF;
+  --text: #1C2733;
+  --muted: #5A6878;
+  --border: #DCE3EA;
+  --header-text: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #3692BE;
+    --bg: #0F2033;
+    --surface: #1A3652;
+    --text: #E8EEF4;
+    --muted: #A9B8C7;
+    --border: #2B4A6A;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+  background: var(--navy);
+  color: var(--header-text);
+  border-bottom: 4px solid var(--accent);
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.brand {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+nav a {
+  color: #CFE3F0;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+}
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a[aria-current="page"] { color: var(--header-text); text-decoration: underline; }
+
+main .wrap { padding-top: 32px; padding-bottom: 48px; }
+
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+h3 { font-size: 1.05rem; margin: 0 0 6px; }
+
+.updated { color: var(--muted); font-size: 0.95rem; margin: 0 0 24px; }
+
+a { color: var(--accent); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+.lead {
+  font-size: 1.1rem;
+  border-left: 4px solid var(--accent);
+}
+
+.faq .card { margin: 12px 0; }
+
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+footer .wrap { padding-top: 20px; padding-bottom: 32px; }
